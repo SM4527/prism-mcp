@@ -1,6 +1,6 @@
 # Prism MCP
 
-A read-only MCP server (stdio) that lets an AI assistant answer questions about your own Prism apps, starting with FolioPrism. It runs on your machine and only talks to loopback addresses.
+A read-only MCP server (stdio) that lets an AI assistant answer questions about your own Prism apps, starting with [FolioPrism](https://github.com/SM4527/folioprism). It runs on your machine and only talks to loopback addresses.
 
 A personal analysis tool, not investment advice. Data comes from your own FolioPrism instance.
 
