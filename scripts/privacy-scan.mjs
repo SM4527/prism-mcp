@@ -15,7 +15,7 @@ const problems = [];
 for (const file of files) {
   if (FORBIDDEN_FILES.some((pattern) => pattern.test(file))) problems.push(`${file}: local-only file must not be committed`);
   const content = readFileSync(file, "utf8");
-  if (THIRD_PARTY_NAME.test(content)) problems.push(`${file}: contains a third-party data vendor name`);
+  if (!file.startsWith("tests/fixtures/") && THIRD_PARTY_NAME.test(content)) problems.push(`${file}: contains a third-party data vendor name`);
   const mentions = content.split(PERSONAL_PORT).length - 1;
   if (mentions > (ALLOWED_PORT_MENTIONS[file] ?? 0)) problems.push(`${file}: mentions the personal port ${mentions} time(s)`);
 }

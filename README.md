@@ -4,6 +4,10 @@ A read-only MCP server (stdio) that lets an AI assistant answer questions about 
 
 A personal analysis tool, not investment advice. Data comes from your own FolioPrism instance.
 
+![Demo](docs/demo.gif)
+
+*Sample portfolio, Qwen3 4B Instruct in LM Studio*
+
 Tools: `prism_status`, `folioprism_summary`, `folioprism_top_stocks`, `folioprism_stock_exposure`, `folioprism_fund_overlap`, `folioprism_prism_view`, `folioprism_data_quality`.
 
 ## Run
