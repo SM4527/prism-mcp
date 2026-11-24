@@ -86,11 +86,11 @@ Clients pass only the environment variables listed in their config, so `PRISM_MC
 Tool results go to Anthropic. Keep `detail` at `percent` and do not use `full`.
 
 1. Build the server and create your config as above.
-2. Settings, Developer, Edit Config opens `claude_desktop_config.json` (normally `%APPDATA%\Claude`). Add the same `mcpServers` entry as above, either variant.
+2. Open `claude_desktop_config.json` and add the same `mcpServers` entry as above, either variant. The packaged Windows install keeps it at `%LOCALAPPDATA%\Claude-Data\<package-id>\claude_desktop_config.json`, not `%APPDATA%\Claude`. The reliable way to find it: menu (≡), Help, Troubleshooting, Enable Developer Mode, then Settings, Developer, Edit Config.
 3. Quit Claude Desktop completely and restart it.
 4. Ask Claude to call `prism_status` and confirm the stack and detail level before asking real questions.
 
-Not verified on Windows on ARM; I found no ARM64-specific guidance.
+Tested on Windows on ARM (Snapdragon X): Claude Desktop ran as native ARM64 and `prism_status` worked against the sample stack.
 
 ## Development
 
