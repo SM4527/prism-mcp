@@ -1,0 +1,31 @@
+{
+  "name": "prism-mcp",
+  "version": "0.0.1",
+  "description": "Read-only MCP server that answers questions about your own Prism apps, starting with FolioPrism.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "privacy-scan": "node scripts/privacy-scan.mjs",
+    "prepare": "git config core.hooksPath .githooks"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "decimal.js": "^10.6.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "eslint": "^10.15.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^5.1.1"
+  }
+}

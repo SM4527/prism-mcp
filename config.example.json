@@ -1,0 +1,11 @@
+{
+  "detail": "percent",
+  "apps": {
+    "folioprism": {
+      "enabled": true,
+      "baseUrl": "http://127.0.0.1:8420",
+      "tools": { "folioprism_top_stocks": false }
+    }
+  },
+  "logDir": "~/.prism-mcp/logs"
+}

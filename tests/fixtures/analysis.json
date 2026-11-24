@@ -1,0 +1,2024 @@
+{
+  "summary": {
+    "name": "My Portfolio",
+    "benchmark": "SPY",
+    "benchmarkHoldingsAsOf": "2026-06-30",
+    "totalCents": "14366600",
+    "asOf": "2026-11-24T01:02:14.000Z",
+    "staleTickers": [],
+    "unpricedTickers": []
+  },
+  "holdings": [
+    {
+      "id": 1,
+      "ticker": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "livePrice": "355.27",
+      "priceKind": "PRICE",
+      "asOf": "2026-11-23T21:00:00.000Z",
+      "source": "cache",
+      "stale": false,
+      "valueCents": "4000000"
+    },
+    {
+      "id": 2,
+      "ticker": "FXAIX",
+      "name": "Fidelity 500 Index",
+      "livePrice": "251.8",
+      "priceKind": "NAV",
+      "asOf": "2026-11-24T01:02:14.000Z",
+      "source": "cache",
+      "stale": false,
+      "valueCents": "3000000"
+    },
+    {
+      "id": 3,
+      "ticker": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "livePrice": "651.03",
+      "priceKind": "PRICE",
+      "asOf": "2026-11-23T21:00:01.000Z",
+      "source": "cache",
+      "stale": false,
+      "valueCents": "3255150"
+    },
+    {
+      "id": 4,
+      "ticker": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "livePrice": "34.39",
+      "priceKind": "PRICE",
+      "asOf": "2026-11-23T21:00:00.000Z",
+      "source": "cache",
+      "stale": false,
+      "valueCents": "1000000"
+    },
+    {
+      "id": 5,
+      "ticker": "BND",
+      "name": "Vanguard Total Bond Market Index Fund ETF Shares",
+      "livePrice": "71.36",
+      "priceKind": "PRICE",
+      "asOf": "2026-11-23T21:00:01.000Z",
+      "source": "cache",
+      "stale": false,
+      "valueCents": "1500000"
+    },
+    {
+      "id": 6,
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "livePrice": "349.08",
+      "priceKind": "PRICE",
+      "asOf": "2026-11-23T21:00:01.000Z",
+      "source": "cache",
+      "stale": false,
+      "valueCents": "872700"
+    },
+    {
+      "id": 7,
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "livePrice": "492.5",
+      "priceKind": "PRICE",
+      "asOf": "2026-11-23T21:00:01.000Z",
+      "source": "cache",
+      "stale": false,
+      "valueCents": "738750"
+    }
+  ],
+  "intersection": {
+    "rows": [
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc.",
+        "portfolioPct": "11.1591",
+        "portfolioPctDisplay": "11.16",
+        "valueCents": "1603186",
+        "children": [
+          {
+            "sourceTicker": "AAPL",
+            "sourceName": "Direct Holding",
+            "fundWeightPct": "100.0000",
+            "portfolioPct": "6.0745",
+            "portfolioPctDisplay": "6.08",
+            "valueCents": "872700"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "8.7457",
+            "portfolioPct": "1.9816",
+            "portfolioPctDisplay": "1.98",
+            "valueCents": "284686"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "5.8716",
+            "portfolioPct": "1.6348",
+            "portfolioPctDisplay": "1.63",
+            "valueCents": "234864"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "7.0312",
+            "portfolioPct": "1.4682",
+            "portfolioPctDisplay": "1.47",
+            "valueCents": "210936"
+          }
+        ]
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft Corporation",
+        "portfolioPct": "8.8510",
+        "portfolioPctDisplay": "8.85",
+        "valueCents": "1271583",
+        "children": [
+          {
+            "sourceTicker": "MSFT",
+            "sourceName": "Direct Holding",
+            "fundWeightPct": "100.0000",
+            "portfolioPct": "5.1422",
+            "portfolioPctDisplay": "5.14",
+            "valueCents": "738750"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "6.4174",
+            "portfolioPct": "1.4540",
+            "portfolioPctDisplay": "1.45",
+            "valueCents": "208896"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "5.6935",
+            "portfolioPct": "1.1889",
+            "portfolioPctDisplay": "1.19",
+            "valueCents": "170805"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "3.8283",
+            "portfolioPct": "1.0659",
+            "portfolioPctDisplay": "1.07",
+            "valueCents": "153132"
+          }
+        ]
+      },
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA Corp",
+        "portfolioPct": "4.8582",
+        "portfolioPctDisplay": "4.86",
+        "valueCents": "697952",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "6.3554",
+            "portfolioPct": "1.7695",
+            "portfolioPctDisplay": "1.77",
+            "valueCents": "254216"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "8.0793",
+            "portfolioPct": "1.6871",
+            "portfolioPctDisplay": "1.69",
+            "valueCents": "242379"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "6.1858",
+            "portfolioPct": "1.4016",
+            "portfolioPctDisplay": "1.40",
+            "valueCents": "201357"
+          }
+        ]
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc",
+        "portfolioPct": "2.8024",
+        "portfolioPctDisplay": "2.80",
+        "valueCents": "402610",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "4.9102",
+            "portfolioPct": "1.1125",
+            "portfolioPctDisplay": "1.11",
+            "valueCents": "159834"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "3.1879",
+            "portfolioPct": "0.8876",
+            "portfolioPctDisplay": "0.89",
+            "valueCents": "127516"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "3.8420",
+            "portfolioPct": "0.8023",
+            "portfolioPctDisplay": "0.80",
+            "valueCents": "115260"
+          }
+        ]
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc Class A",
+        "portfolioPct": "2.0724",
+        "portfolioPctDisplay": "2.07",
+        "valueCents": "297739",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "2.8955",
+            "portfolioPct": "0.8061",
+            "portfolioPctDisplay": "0.80",
+            "valueCents": "115820"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "2.8179",
+            "portfolioPct": "0.6385",
+            "portfolioPctDisplay": "0.64",
+            "valueCents": "91727"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "3.0064",
+            "portfolioPct": "0.6278",
+            "portfolioPctDisplay": "0.63",
+            "valueCents": "90192"
+          }
+        ]
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom Inc",
+        "portfolioPct": "1.8901",
+        "portfolioPctDisplay": "1.89",
+        "valueCents": "271543",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "2.4710",
+            "portfolioPct": "0.6880",
+            "portfolioPctDisplay": "0.69",
+            "valueCents": "98840"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "2.8640",
+            "portfolioPct": "0.6489",
+            "portfolioPctDisplay": "0.65",
+            "valueCents": "93227"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "2.6492",
+            "portfolioPct": "0.5532",
+            "portfolioPctDisplay": "0.55",
+            "valueCents": "79476"
+          }
+        ]
+      },
+      {
+        "ticker": "GOOG",
+        "name": "Alphabet Inc Class C",
+        "portfolioPct": "1.7294",
+        "portfolioPctDisplay": "1.73",
+        "valueCents": "248461",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "2.2800",
+            "portfolioPct": "0.6348",
+            "portfolioPctDisplay": "0.64",
+            "valueCents": "91200"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "2.6237",
+            "portfolioPct": "0.5945",
+            "portfolioPctDisplay": "0.59",
+            "valueCents": "85405"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "2.3952",
+            "portfolioPct": "0.5001",
+            "portfolioPctDisplay": "0.50",
+            "valueCents": "71856"
+          }
+        ]
+      },
+      {
+        "ticker": "MU",
+        "name": "Micron Technology Inc",
+        "portfolioPct": "1.6890",
+        "portfolioPctDisplay": "1.69",
+        "valueCents": "242645",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "3.7388",
+            "portfolioPct": "0.8472",
+            "portfolioPctDisplay": "0.85",
+            "valueCents": "121704"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "1.7984",
+            "portfolioPct": "0.5007",
+            "portfolioPctDisplay": "0.50",
+            "valueCents": "71936"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.6335",
+            "portfolioPct": "0.3411",
+            "portfolioPctDisplay": "0.34",
+            "valueCents": "49005"
+          }
+        ]
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms Inc",
+        "portfolioPct": "1.5785",
+        "portfolioPctDisplay": "1.58",
+        "valueCents": "226770",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "3.1163",
+            "portfolioPct": "0.7061",
+            "portfolioPctDisplay": "0.71",
+            "valueCents": "101440"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "1.7090",
+            "portfolioPct": "0.4758",
+            "portfolioPctDisplay": "0.47",
+            "valueCents": "68360"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.8990",
+            "portfolioPct": "0.3966",
+            "portfolioPctDisplay": "0.40",
+            "valueCents": "56970"
+          }
+        ]
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla Inc",
+        "portfolioPct": "1.5591",
+        "portfolioPctDisplay": "1.56",
+        "valueCents": "223992",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "3.4274",
+            "portfolioPct": "0.7766",
+            "portfolioPctDisplay": "0.78",
+            "valueCents": "111567"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "1.6368",
+            "portfolioPct": "0.4557",
+            "portfolioPctDisplay": "0.45",
+            "valueCents": "65472"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.5651",
+            "portfolioPct": "0.3268",
+            "portfolioPctDisplay": "0.33",
+            "valueCents": "46953"
+          }
+        ]
+      },
+      {
+        "ticker": "AMD",
+        "name": "Advanced Micro Devices Inc",
+        "portfolioPct": "1.5270",
+        "portfolioPctDisplay": "1.53",
+        "valueCents": "219373",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "4.0623",
+            "portfolioPct": "0.9204",
+            "portfolioPctDisplay": "0.92",
+            "valueCents": "132234"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "1.3087",
+            "portfolioPct": "0.3644",
+            "portfolioPctDisplay": "0.37",
+            "valueCents": "52348"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.1597",
+            "portfolioPct": "0.2422",
+            "portfolioPctDisplay": "0.24",
+            "valueCents": "34791"
+          }
+        ]
+      },
+      {
+        "ticker": "WMT",
+        "name": "Walmart Inc",
+        "portfolioPct": "0.9948",
+        "portfolioPctDisplay": "0.99",
+        "valueCents": "142915",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "2.9073",
+            "portfolioPct": "0.6587",
+            "portfolioPctDisplay": "0.66",
+            "valueCents": "94637"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.6860",
+            "portfolioPct": "0.1910",
+            "portfolioPctDisplay": "0.19",
+            "valueCents": "27440"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.6946",
+            "portfolioPct": "0.1451",
+            "portfolioPctDisplay": "0.14",
+            "valueCents": "20838"
+          }
+        ]
+      },
+      {
+        "ticker": "COST",
+        "name": "Costco Wholesale Corp",
+        "portfolioPct": "0.8090",
+        "portfolioPctDisplay": "0.81",
+        "valueCents": "116226",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "2.2828",
+            "portfolioPct": "0.5172",
+            "portfolioPctDisplay": "0.52",
+            "valueCents": "74309"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.5734",
+            "portfolioPct": "0.1597",
+            "portfolioPctDisplay": "0.16",
+            "valueCents": "22936"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.6327",
+            "portfolioPct": "0.1321",
+            "portfolioPctDisplay": "0.13",
+            "valueCents": "18981"
+          }
+        ]
+      },
+      {
+        "ticker": "AMGN",
+        "name": "Amgen Inc",
+        "portfolioPct": "0.7305",
+        "portfolioPctDisplay": "0.73",
+        "valueCents": "104943",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "4.6962",
+            "portfolioPct": "0.3269",
+            "portfolioPctDisplay": "0.33",
+            "valueCents": "46962"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.1264",
+            "portfolioPct": "0.2552",
+            "portfolioPctDisplay": "0.25",
+            "valueCents": "36666"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2700",
+            "portfolioPct": "0.0752",
+            "portfolioPctDisplay": "0.08",
+            "valueCents": "10800"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.3505",
+            "portfolioPct": "0.0732",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10515"
+          }
+        ]
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc",
+        "portfolioPct": "0.7053",
+        "portfolioPctDisplay": "0.71",
+        "valueCents": "101334",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.7979",
+            "portfolioPct": "0.4073",
+            "portfolioPctDisplay": "0.41",
+            "valueCents": "58524"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.5757",
+            "portfolioPct": "0.1603",
+            "portfolioPctDisplay": "0.16",
+            "valueCents": "23028"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.6594",
+            "portfolioPct": "0.1377",
+            "portfolioPctDisplay": "0.14",
+            "valueCents": "19782"
+          }
+        ]
+      },
+      {
+        "ticker": "SPCX",
+        "name": "Space Exploration Technologies Corp",
+        "portfolioPct": "0.6935",
+        "portfolioPctDisplay": "0.69",
+        "valueCents": "99630",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "2.8895",
+            "portfolioPct": "0.6547",
+            "portfolioPctDisplay": "0.65",
+            "valueCents": "94058"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.1393",
+            "portfolioPct": "0.0388",
+            "portfolioPctDisplay": "0.04",
+            "valueCents": "5572"
+          }
+        ]
+      },
+      {
+        "ticker": "TXN",
+        "name": "Texas Instruments Inc",
+        "portfolioPct": "0.6808",
+        "portfolioPctDisplay": "0.68",
+        "valueCents": "97802",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.2536",
+            "portfolioPct": "0.2841",
+            "portfolioPctDisplay": "0.28",
+            "valueCents": "40807"
+          },
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.1239",
+            "portfolioPct": "0.2174",
+            "portfolioPctDisplay": "0.22",
+            "valueCents": "31239"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.3748",
+            "portfolioPct": "0.1044",
+            "portfolioPctDisplay": "0.10",
+            "valueCents": "14992"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.3588",
+            "portfolioPct": "0.0749",
+            "portfolioPctDisplay": "0.08",
+            "valueCents": "10764"
+          }
+        ]
+      },
+      {
+        "ticker": "LLY",
+        "name": "Eli Lilly & Co",
+        "portfolioPct": "0.6797",
+        "portfolioPctDisplay": "0.68",
+        "valueCents": "97655",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "1.4045",
+            "portfolioPct": "0.3910",
+            "portfolioPctDisplay": "0.39",
+            "valueCents": "56180"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.3825",
+            "portfolioPct": "0.2887",
+            "portfolioPctDisplay": "0.29",
+            "valueCents": "41475"
+          }
+        ]
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp",
+        "portfolioPct": "0.6610",
+        "portfolioPctDisplay": "0.66",
+        "valueCents": "94960",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.3484",
+            "portfolioPct": "0.3055",
+            "portfolioPctDisplay": "0.30",
+            "valueCents": "43892"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.7757",
+            "portfolioPct": "0.2160",
+            "portfolioPctDisplay": "0.22",
+            "valueCents": "31028"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.6680",
+            "portfolioPct": "0.1395",
+            "portfolioPctDisplay": "0.14",
+            "valueCents": "20040"
+          }
+        ]
+      },
+      {
+        "ticker": "BRK.B",
+        "name": "Berkshire Hathaway Inc",
+        "portfolioPct": "0.6379",
+        "portfolioPctDisplay": "0.64",
+        "valueCents": "91647",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "1.2441",
+            "portfolioPct": "0.3464",
+            "portfolioPctDisplay": "0.35",
+            "valueCents": "49764"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.3961",
+            "portfolioPct": "0.2915",
+            "portfolioPctDisplay": "0.29",
+            "valueCents": "41883"
+          }
+        ]
+      },
+      {
+        "ticker": "AMAT",
+        "name": "Applied Materials Inc",
+        "portfolioPct": "0.6329",
+        "portfolioPctDisplay": "0.63",
+        "valueCents": "90929",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.3123",
+            "portfolioPct": "0.2973",
+            "portfolioPctDisplay": "0.30",
+            "valueCents": "42717"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.7931",
+            "portfolioPct": "0.2208",
+            "portfolioPctDisplay": "0.22",
+            "valueCents": "31724"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5496",
+            "portfolioPct": "0.1148",
+            "portfolioPctDisplay": "0.11",
+            "valueCents": "16488"
+          }
+        ]
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir Technologies Inc",
+        "portfolioPct": "0.6163",
+        "portfolioPctDisplay": "0.62",
+        "valueCents": "88536",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.6919",
+            "portfolioPct": "0.3834",
+            "portfolioPctDisplay": "0.38",
+            "valueCents": "55074"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.6466",
+            "portfolioPct": "0.1350",
+            "portfolioPctDisplay": "0.14",
+            "valueCents": "19398"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.3516",
+            "portfolioPct": "0.0979",
+            "portfolioPctDisplay": "0.10",
+            "valueCents": "14064"
+          }
+        ]
+      },
+      {
+        "ticker": "JPM",
+        "name": "JPMorgan Chase & Co",
+        "portfolioPct": "0.6124",
+        "portfolioPctDisplay": "0.61",
+        "valueCents": "87987",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "1.1187",
+            "portfolioPct": "0.3115",
+            "portfolioPctDisplay": "0.31",
+            "valueCents": "44748"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.4413",
+            "portfolioPct": "0.3009",
+            "portfolioPctDisplay": "0.30",
+            "valueCents": "43239"
+          }
+        ]
+      },
+      {
+        "ticker": "LRCX",
+        "name": "Lam Research Corp",
+        "portfolioPct": "0.6091",
+        "portfolioPctDisplay": "0.61",
+        "valueCents": "87510",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.2433",
+            "portfolioPct": "0.2817",
+            "portfolioPctDisplay": "0.28",
+            "valueCents": "40471"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.7487",
+            "portfolioPct": "0.2084",
+            "portfolioPctDisplay": "0.21",
+            "valueCents": "29948"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5697",
+            "portfolioPct": "0.1190",
+            "portfolioPctDisplay": "0.12",
+            "valueCents": "17091"
+          }
+        ]
+      },
+      {
+        "ticker": "PEP",
+        "name": "PepsiCo Inc",
+        "portfolioPct": "0.5909",
+        "portfolioPctDisplay": "0.59",
+        "valueCents": "84888",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.6380",
+            "portfolioPct": "0.2532",
+            "portfolioPctDisplay": "0.25",
+            "valueCents": "36380"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.9089",
+            "portfolioPct": "0.2060",
+            "portfolioPctDisplay": "0.21",
+            "valueCents": "29586"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2557",
+            "portfolioPct": "0.0712",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10228"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.2898",
+            "portfolioPct": "0.0605",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8694"
+          }
+        ]
+      },
+      {
+        "ticker": "MRK",
+        "name": "Merck & Co Inc",
+        "portfolioPct": "0.5686",
+        "portfolioPctDisplay": "0.57",
+        "valueCents": "81682",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "4.7600",
+            "portfolioPct": "0.3313",
+            "portfolioPctDisplay": "0.33",
+            "valueCents": "47600"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.4385",
+            "portfolioPct": "0.1221",
+            "portfolioPctDisplay": "0.12",
+            "valueCents": "17540"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5514",
+            "portfolioPct": "0.1152",
+            "portfolioPctDisplay": "0.12",
+            "valueCents": "16542"
+          }
+        ]
+      },
+      {
+        "ticker": "UNH",
+        "name": "UnitedHealth Group Inc",
+        "portfolioPct": "0.5224",
+        "portfolioPctDisplay": "0.52",
+        "valueCents": "75053",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.8164",
+            "portfolioPct": "0.2656",
+            "portfolioPctDisplay": "0.26",
+            "valueCents": "38164"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.5215",
+            "portfolioPct": "0.1452",
+            "portfolioPctDisplay": "0.15",
+            "valueCents": "20860"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5343",
+            "portfolioPct": "0.1116",
+            "portfolioPctDisplay": "0.11",
+            "valueCents": "16029"
+          }
+        ]
+      },
+      {
+        "ticker": "CVX",
+        "name": "Chevron Corp",
+        "portfolioPct": "0.5219",
+        "portfolioPctDisplay": "0.52",
+        "valueCents": "74974",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "4.0149",
+            "portfolioPct": "0.2795",
+            "portfolioPctDisplay": "0.28",
+            "valueCents": "40149"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5831",
+            "portfolioPct": "0.1218",
+            "portfolioPctDisplay": "0.12",
+            "valueCents": "17493"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.4333",
+            "portfolioPct": "0.1206",
+            "portfolioPctDisplay": "0.12",
+            "valueCents": "17332"
+          }
+        ]
+      },
+      {
+        "ticker": "HD",
+        "name": "Home Depot Inc/The",
+        "portfolioPct": "0.5077",
+        "portfolioPctDisplay": "0.51",
+        "valueCents": "72933",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.8702",
+            "portfolioPct": "0.2694",
+            "portfolioPctDisplay": "0.27",
+            "valueCents": "38702"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.4858",
+            "portfolioPct": "0.1353",
+            "portfolioPctDisplay": "0.14",
+            "valueCents": "19432"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.4933",
+            "portfolioPct": "0.1030",
+            "portfolioPctDisplay": "0.10",
+            "valueCents": "14799"
+          }
+        ]
+      },
+      {
+        "ticker": "KO",
+        "name": "Coca-Cola Co/The",
+        "portfolioPct": "0.5055",
+        "portfolioPctDisplay": "0.51",
+        "valueCents": "72620",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "4.1600",
+            "portfolioPct": "0.2896",
+            "portfolioPctDisplay": "0.29",
+            "valueCents": "41600"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5188",
+            "portfolioPct": "0.1083",
+            "portfolioPctDisplay": "0.11",
+            "valueCents": "15564"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.3864",
+            "portfolioPct": "0.1076",
+            "portfolioPctDisplay": "0.11",
+            "valueCents": "15456"
+          }
+        ]
+      },
+      {
+        "ticker": "PG",
+        "name": "Procter & Gamble Co/The",
+        "portfolioPct": "0.5042",
+        "portfolioPctDisplay": "0.50",
+        "valueCents": "72435",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.8249",
+            "portfolioPct": "0.2663",
+            "portfolioPctDisplay": "0.26",
+            "valueCents": "38249"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.4717",
+            "portfolioPct": "0.1313",
+            "portfolioPctDisplay": "0.13",
+            "valueCents": "18868"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5106",
+            "portfolioPct": "0.1066",
+            "portfolioPctDisplay": "0.11",
+            "valueCents": "15318"
+          }
+        ]
+      },
+      {
+        "ticker": "PANW",
+        "name": "Palo Alto Networks Inc",
+        "portfolioPct": "0.4995",
+        "portfolioPctDisplay": "0.50",
+        "valueCents": "71756",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.3004",
+            "portfolioPct": "0.2947",
+            "portfolioPctDisplay": "0.29",
+            "valueCents": "42330"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.3845",
+            "portfolioPct": "0.1070",
+            "portfolioPctDisplay": "0.11",
+            "valueCents": "15380"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.4682",
+            "portfolioPct": "0.0978",
+            "portfolioPctDisplay": "0.10",
+            "valueCents": "14046"
+          }
+        ]
+      },
+      {
+        "ticker": "NFLX",
+        "name": "Netflix Inc",
+        "portfolioPct": "0.4882",
+        "portfolioPctDisplay": "0.49",
+        "valueCents": "70143",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.1692",
+            "portfolioPct": "0.2649",
+            "portfolioPctDisplay": "0.26",
+            "valueCents": "38059"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.4154",
+            "portfolioPct": "0.1156",
+            "portfolioPctDisplay": "0.12",
+            "valueCents": "16616"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.5156",
+            "portfolioPct": "0.1077",
+            "portfolioPctDisplay": "0.11",
+            "valueCents": "15468"
+          }
+        ]
+      },
+      {
+        "ticker": "QCOM",
+        "name": "QUALCOMM Inc",
+        "portfolioPct": "0.4855",
+        "portfolioPctDisplay": "0.49",
+        "valueCents": "69748",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.7878",
+            "portfolioPct": "0.1785",
+            "portfolioPctDisplay": "0.18",
+            "valueCents": "25644"
+          },
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "2.5195",
+            "portfolioPct": "0.1754",
+            "portfolioPctDisplay": "0.18",
+            "valueCents": "25195"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2691",
+            "portfolioPct": "0.0749",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10764"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.2715",
+            "portfolioPct": "0.0567",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8145"
+          }
+        ]
+      },
+      {
+        "ticker": "ABT",
+        "name": "Abbott Laboratories",
+        "portfolioPct": "0.4472",
+        "portfolioPctDisplay": "0.45",
+        "valueCents": "64241",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "4.6793",
+            "portfolioPct": "0.3257",
+            "portfolioPctDisplay": "0.33",
+            "valueCents": "46793"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2184",
+            "portfolioPct": "0.0608",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8736"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.2904",
+            "portfolioPct": "0.0607",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8712"
+          }
+        ]
+      },
+      {
+        "ticker": "JNJ",
+        "name": "Johnson & Johnson",
+        "portfolioPct": "0.4371",
+        "portfolioPctDisplay": "0.44",
+        "valueCents": "62795",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.8447",
+            "portfolioPct": "0.2352",
+            "portfolioPctDisplay": "0.24",
+            "valueCents": "33788"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.9669",
+            "portfolioPct": "0.2019",
+            "portfolioPctDisplay": "0.20",
+            "valueCents": "29007"
+          }
+        ]
+      },
+      {
+        "ticker": "XOM",
+        "name": "ExxonMobil Holdings Corp",
+        "portfolioPct": "0.4285",
+        "portfolioPctDisplay": "0.43",
+        "valueCents": "61556",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.7829",
+            "portfolioPct": "0.2180",
+            "portfolioPctDisplay": "0.22",
+            "valueCents": "31316"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "1.0080",
+            "portfolioPct": "0.2105",
+            "portfolioPctDisplay": "0.21",
+            "valueCents": "30240"
+          }
+        ]
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA Corp",
+        "portfolioPct": "0.4255",
+        "portfolioPctDisplay": "0.43",
+        "valueCents": "61137",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.8899",
+            "portfolioPct": "0.2016",
+            "portfolioPctDisplay": "0.21",
+            "valueCents": "28968"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.5445",
+            "portfolioPct": "0.1516",
+            "portfolioPctDisplay": "0.15",
+            "valueCents": "21780"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.3463",
+            "portfolioPct": "0.0723",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10389"
+          }
+        ]
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde PLC",
+        "portfolioPct": "0.4148",
+        "portfolioPctDisplay": "0.41",
+        "valueCents": "59598",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.1082",
+            "portfolioPct": "0.2511",
+            "portfolioPctDisplay": "0.25",
+            "valueCents": "36074"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.3316",
+            "portfolioPct": "0.0923",
+            "portfolioPctDisplay": "0.09",
+            "valueCents": "13264"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.3420",
+            "portfolioPct": "0.0714",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10260"
+          }
+        ]
+      },
+      {
+        "ticker": "V",
+        "name": "Visa Inc",
+        "portfolioPct": "0.4134",
+        "portfolioPctDisplay": "0.41",
+        "valueCents": "59395",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.7714",
+            "portfolioPct": "0.2148",
+            "portfolioPctDisplay": "0.21",
+            "valueCents": "30856"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.9513",
+            "portfolioPct": "0.1986",
+            "portfolioPctDisplay": "0.20",
+            "valueCents": "28539"
+          }
+        ]
+      },
+      {
+        "ticker": "CRWD",
+        "name": "Crowdstrike Holdings Inc",
+        "portfolioPct": "0.4033",
+        "portfolioPctDisplay": "0.40",
+        "valueCents": "57942",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "1.1392",
+            "portfolioPct": "0.2581",
+            "portfolioPctDisplay": "0.26",
+            "valueCents": "37083"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.3553",
+            "portfolioPct": "0.0742",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10659"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2550",
+            "portfolioPct": "0.0710",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10200"
+          }
+        ]
+      },
+      {
+        "ticker": "VZ",
+        "name": "Verizon Communications Inc",
+        "portfolioPct": "0.4029",
+        "portfolioPctDisplay": "0.40",
+        "valueCents": "57880",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.9620",
+            "portfolioPct": "0.2758",
+            "portfolioPctDisplay": "0.27",
+            "valueCents": "39620"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.3156",
+            "portfolioPct": "0.0659",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "9468"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2198",
+            "portfolioPct": "0.0612",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8792"
+          }
+        ]
+      },
+      {
+        "ticker": "ADP",
+        "name": "Automatic Data Processing Inc",
+        "portfolioPct": "0.3934",
+        "portfolioPctDisplay": "0.39",
+        "valueCents": "56524",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "2.7844",
+            "portfolioPct": "0.1938",
+            "portfolioPctDisplay": "0.19",
+            "valueCents": "27844"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.5698",
+            "portfolioPct": "0.1291",
+            "portfolioPctDisplay": "0.13",
+            "valueCents": "18548"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.1728",
+            "portfolioPct": "0.0361",
+            "portfolioPctDisplay": "0.04",
+            "valueCents": "5184"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.1237",
+            "portfolioPct": "0.0344",
+            "portfolioPctDisplay": "0.03",
+            "valueCents": "4948"
+          }
+        ]
+      },
+      {
+        "ticker": "COP",
+        "name": "ConocoPhillips",
+        "portfolioPct": "0.3732",
+        "portfolioPctDisplay": "0.37",
+        "valueCents": "53613",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.9292",
+            "portfolioPct": "0.2735",
+            "portfolioPctDisplay": "0.27",
+            "valueCents": "39292"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.2439",
+            "portfolioPct": "0.0509",
+            "portfolioPctDisplay": "0.05",
+            "valueCents": "7317"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.1751",
+            "portfolioPct": "0.0488",
+            "portfolioPctDisplay": "0.05",
+            "valueCents": "7004"
+          }
+        ]
+      },
+      {
+        "ticker": "GILD",
+        "name": "Gilead Sciences Inc",
+        "portfolioPct": "0.3405",
+        "portfolioPctDisplay": "0.34",
+        "valueCents": "48917",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.9835",
+            "portfolioPct": "0.2229",
+            "portfolioPctDisplay": "0.22",
+            "valueCents": "32014"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2167",
+            "portfolioPct": "0.0603",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8668"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.2745",
+            "portfolioPct": "0.0573",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8235"
+          }
+        ]
+      },
+      {
+        "ticker": "ADI",
+        "name": "Analog Devices Inc",
+        "portfolioPct": "0.3271",
+        "portfolioPctDisplay": "0.33",
+        "valueCents": "46986",
+        "children": [
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.8688",
+            "portfolioPct": "0.1969",
+            "portfolioPctDisplay": "0.20",
+            "valueCents": "28281"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.2673",
+            "portfolioPct": "0.0744",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10692"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.2671",
+            "portfolioPct": "0.0558",
+            "portfolioPctDisplay": "0.06",
+            "valueCents": "8013"
+          }
+        ]
+      },
+      {
+        "ticker": "SNDK",
+        "name": "Sandisk Corp",
+        "portfolioPct": "0.3236",
+        "portfolioPctDisplay": "0.32",
+        "valueCents": "46489",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.4652",
+            "portfolioPct": "0.1295",
+            "portfolioPctDisplay": "0.13",
+            "valueCents": "18608"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.5335",
+            "portfolioPct": "0.1209",
+            "portfolioPctDisplay": "0.12",
+            "valueCents": "17366"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.3505",
+            "portfolioPct": "0.0732",
+            "portfolioPctDisplay": "0.07",
+            "valueCents": "10515"
+          }
+        ]
+      },
+      {
+        "ticker": "BMY",
+        "name": "Bristol-Myers Squibb Co",
+        "portfolioPct": "0.3195",
+        "portfolioPctDisplay": "0.32",
+        "valueCents": "45898",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "3.3211",
+            "portfolioPct": "0.2312",
+            "portfolioPctDisplay": "0.23",
+            "valueCents": "33211"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.1626",
+            "portfolioPct": "0.0453",
+            "portfolioPctDisplay": "0.05",
+            "valueCents": "6504"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.2061",
+            "portfolioPct": "0.0430",
+            "portfolioPctDisplay": "0.04",
+            "valueCents": "6183"
+          }
+        ]
+      },
+      {
+        "ticker": "CMCSA",
+        "name": "Comcast Corp",
+        "portfolioPct": "0.3193",
+        "portfolioPctDisplay": "0.32",
+        "valueCents": "45867",
+        "children": [
+          {
+            "sourceTicker": "SCHD",
+            "sourceName": "Schwab U.S. Dividend Equity ETF",
+            "fundWeightPct": "2.3087",
+            "portfolioPct": "0.1607",
+            "portfolioPctDisplay": "0.16",
+            "valueCents": "23087"
+          },
+          {
+            "sourceTicker": "QQQ",
+            "sourceName": "Invesco QQQ Trust",
+            "fundWeightPct": "0.4193",
+            "portfolioPct": "0.0950",
+            "portfolioPctDisplay": "0.10",
+            "valueCents": "13649"
+          },
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.1208",
+            "portfolioPct": "0.0337",
+            "portfolioPctDisplay": "0.03",
+            "valueCents": "4832"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.1433",
+            "portfolioPct": "0.0299",
+            "portfolioPctDisplay": "0.03",
+            "valueCents": "4299"
+          }
+        ]
+      },
+      {
+        "ticker": "ABBV",
+        "name": "AbbVie Inc",
+        "portfolioPct": "0.3140",
+        "portfolioPctDisplay": "0.31",
+        "valueCents": "45107",
+        "children": [
+          {
+            "sourceTicker": "VTI",
+            "sourceName": "Vanguard Total Stock Market ETF",
+            "fundWeightPct": "0.6143",
+            "portfolioPct": "0.1711",
+            "portfolioPctDisplay": "0.17",
+            "valueCents": "24572"
+          },
+          {
+            "sourceTicker": "FXAIX",
+            "sourceName": "Fidelity 500 Index Fund",
+            "fundWeightPct": "0.6845",
+            "portfolioPct": "0.1429",
+            "portfolioPctDisplay": "0.14",
+            "valueCents": "20535"
+          }
+        ]
+      }
+    ],
+    "coverage": {
+      "lookThroughPct": "89.3059",
+      "otherPct": "10.6941",
+      "fundCoveredPct": "87.9548",
+      "fundOtherPct": "12.0452",
+      "items": [
+        {
+          "ticker": "BND",
+          "coveredPct": "0.0000",
+          "source": "curated",
+          "unavailable": false,
+          "sourceUrl": null,
+          "holdingsAsOf": null,
+          "asOfOrigin": "curated",
+          "curated": true
+        },
+        {
+          "ticker": "FXAIX",
+          "coveredPct": "99.7867",
+          "source": "curated",
+          "unavailable": false,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/819118/000003540226006760/primary_doc.xml",
+          "holdingsAsOf": "2026-08-31",
+          "asOfOrigin": "curated",
+          "curated": true
+        },
+        {
+          "ticker": "QQQ",
+          "coveredPct": "99.7653",
+          "source": "curated",
+          "unavailable": false,
+          "sourceUrl": "https://www.invesco.com/us/financial-products/etfs/product-detail?audienceType=Investor&ticker=QQQ",
+          "holdingsAsOf": "2026-11-18",
+          "asOfOrigin": "curated",
+          "curated": true
+        },
+        {
+          "ticker": "SCHD",
+          "coveredPct": "99.7656",
+          "source": "curated",
+          "unavailable": false,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1454889/000141036826108609/primary_doc.xml",
+          "holdingsAsOf": "2026-08-31",
+          "asOfOrigin": "curated",
+          "curated": true
+        },
+        {
+          "ticker": "VTI",
+          "coveredPct": "99.5000",
+          "source": "curated",
+          "unavailable": false,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36405/000003640526000480/primary_doc.xml",
+          "holdingsAsOf": "2026-06-30",
+          "asOfOrigin": "curated",
+          "curated": true
+        },
+        {
+          "ticker": "AAPL",
+          "coveredPct": "100.0000",
+          "source": "direct",
+          "unavailable": false,
+          "sourceUrl": null,
+          "holdingsAsOf": null,
+          "asOfOrigin": null,
+          "curated": false
+        },
+        {
+          "ticker": "MSFT",
+          "coveredPct": "100.0000",
+          "source": "direct",
+          "unavailable": false,
+          "sourceUrl": null,
+          "holdingsAsOf": null,
+          "asOfOrigin": null,
+          "curated": false
+        }
+      ]
+    }
+  },
+  "prismView": {
+    "allocation": {
+      "portfolio": {
+        "cash": "0.2",
+        "usStock": "87.3",
+        "nonUsStock": "2.2",
+        "bond": "10.3",
+        "other": "0.0"
+      },
+      "benchmark": {
+        "cash": "0.0",
+        "usStock": "97.0",
+        "nonUsStock": "3.0",
+        "bond": "0.0",
+        "other": "0.0"
+      }
+    },
+    "styleBox": {
+      "portfolio": {
+        "cells": {
+          "large": {
+            "value": "16.4",
+            "blend": "26.9",
+            "growth": "35.6"
+          },
+          "mid": {
+            "value": "4.9",
+            "blend": "5.7",
+            "growth": "6.4"
+          },
+          "small": {
+            "value": "1.1",
+            "blend": "0.9",
+            "growth": "1.0"
+          }
+        },
+        "notClassified": "1.1",
+        "fallbackTickers": [],
+        "sizeBasis": "market"
+      },
+      "benchmark": {
+        "cells": {
+          "large": {
+            "value": "18.1",
+            "blend": "25.5",
+            "growth": "35.4"
+          },
+          "mid": {
+            "value": "5.7",
+            "blend": "6.6",
+            "growth": "7.0"
+          },
+          "small": {
+            "value": "0.7",
+            "blend": "0.3",
+            "growth": "0.5"
+          }
+        },
+        "notClassified": "0.2",
+        "fallbackTickers": [],
+        "sizeBasis": "market"
+      }
+    },
+    "sectors": {
+      "portfolio": {
+        "leaves": {
+          "basicMaterials": "1.2",
+          "consumerCyclical": "8.2",
+          "financialServices": "7.2",
+          "realEstate": "1.1",
+          "communicationServices": "8.0",
+          "energy": "3.5",
+          "industrials": "6.4",
+          "technology": "49.1",
+          "consumerDefensive": "5.7",
+          "healthcare": "8.2",
+          "utilities": "1.4"
+        },
+        "groups": {
+          "cyclical": "17.7",
+          "sensitive": "67.0",
+          "defensive": "15.3"
+        },
+        "notClassified": "0.0"
+      },
+      "benchmark": {
+        "leaves": {
+          "basicMaterials": "1.6",
+          "consumerCyclical": "9.2",
+          "financialServices": "12.0",
+          "realEstate": "1.8",
+          "communicationServices": "8.4",
+          "energy": "3.9",
+          "industrials": "7.6",
+          "technology": "38.2",
+          "consumerDefensive": "4.9",
+          "healthcare": "10.3",
+          "utilities": "2.1"
+        },
+        "groups": {
+          "cyclical": "24.6",
+          "sensitive": "58.1",
+          "defensive": "17.3"
+        },
+        "notClassified": "0.0"
+      }
+    },
+    "regions": {
+      "portfolio": {
+        "leaves": {
+          "northAmerica": "98.1",
+          "latinAmerica": "0.0",
+          "unitedKingdom": "0.2",
+          "europeDeveloped": "1.7",
+          "europeEmerging": "0.0",
+          "africaMiddleEast": "0.0",
+          "japan": "0.0",
+          "australasia": "0.0",
+          "asiaDeveloped": "0.0",
+          "asiaEmerging": "0.0"
+        },
+        "groups": {
+          "americas": "98.1",
+          "greaterEurope": "1.9",
+          "greaterAsia": "0.0"
+        },
+        "notClassified": "0.0"
+      },
+      "benchmark": {
+        "leaves": {
+          "northAmerica": "97.5",
+          "latinAmerica": "0.0",
+          "unitedKingdom": "0.0",
+          "europeDeveloped": "2.4",
+          "europeEmerging": "0.0",
+          "africaMiddleEast": "0.0",
+          "japan": "0.0",
+          "australasia": "0.0",
+          "asiaDeveloped": "0.1",
+          "asiaEmerging": "0.0"
+        },
+        "groups": {
+          "americas": "97.5",
+          "greaterEurope": "2.4",
+          "greaterAsia": "0.1"
+        },
+        "notClassified": "0.0"
+      }
+    },
+    "valuation": {
+      "portfolio": {
+        "marketCapMil": "725503.25",
+        "pe": "24.90",
+        "pb": "5.88",
+        "ps": "3.84",
+        "pcf": "17.84"
+      },
+      "benchmark": {
+        "marketCapMil": "1438053.80",
+        "pe": "24.04",
+        "pb": "5.08",
+        "ps": "3.44",
+        "pcf": "18.23"
+      }
+    },
+    "fees": {
+      "portfolio": {
+        "expenseRatioPct": "0.0596",
+        "feeCents": "8559",
+        "unknownTickers": []
+      },
+      "benchmark": {
+        "expenseRatioPct": "0.0945",
+        "feeCents": "13576",
+        "unknownTickers": []
+      }
+    },
+    "bonds": {
+      "portfolio": {
+        "sectors": {
+          "government": "50.5",
+          "municipal": "0.4",
+          "corporate": "27.2",
+          "securitized": "21.0",
+          "cash": "0.9"
+        },
+        "credit": {
+          "aaa": "3.2",
+          "aa": "72.6",
+          "a": "12.0",
+          "bbb": "12.2",
+          "bb": "0.0",
+          "b": "0.0",
+          "belowB": "0.0",
+          "nr": "0.0"
+        },
+        "effectiveDurationYears": "5.70",
+        "effectiveMaturityYears": "9.26"
+      },
+      "benchmark": null
+    }
+  }
+}
