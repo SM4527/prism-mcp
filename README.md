@@ -86,6 +86,15 @@ Small local models can add details that aren't in the tool's answer. Expand the 
 
 `npm run privacy-scan` runs on pre-push (`.githooks/pre-push`) and blocks local config, env files and logs. `npm install` activates the hook through the `prepare` script; if you skipped it, run `git config core.hooksPath .githooks` once.
 
+## FolioPrism
+
+FolioPrism analyzes your portfolio, including look-through exposure across funds. It is on by default.
+
+- Sample stack: `baseUrl` defaults to `http://127.0.0.1:8420`. Start FolioPrism's sample stack first.
+- Tools: `folioprism_summary` (`mergeShareClasses`), `folioprism_top_stocks` (`limit`, 1-50), `folioprism_stock_exposure` (`ticker`), `folioprism_fund_overlap` (`fundA`, `fundB`, `limit`), `folioprism_prism_view` (`section`; all sections when omitted), `folioprism_data_quality` (no parameters).
+- At `percent` detail, results hold percentages, tickers and names only. At `full` (set in your config file, never by the model) they add dollar values (`valueUsd`, the yearly fee in `folioprism_prism_view`) and the portfolio total (`totalUsd` in `folioprism_summary`).
+- Same guards as SignalPrism: loopback only, GET only, per-tool allowlist, calls logged without results.
+
 ## SignalPrism
 
 SignalPrism tracks insider purchases from SEC Form 4 filings. It is off until you enable it in your config:
