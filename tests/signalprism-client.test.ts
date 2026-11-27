@@ -19,12 +19,12 @@ describe("SignalPrism client", () => {
   it("sends only GET requests to the /api/mcp routes", async () => {
     const client = createSignalPrismClient(fake.baseUrl);
     await client.status();
-    await client.signals({ days: 30, minScore: 4, role: "CEO", heldOnly: true, includePlan: true });
+    await client.signals({ days: 30, minScore: 4, role: "CEO", heldOnly: true, watchedOnly: false, includePlan: true });
     await client.clusters(60);
     await client.ticker("GSBD");
     expect(fake.requests.map((r) => `${r.method} ${r.url}`)).toEqual([
       "GET /api/mcp/status",
-      "GET /api/mcp/signals?days=30&minScore=4&role=CEO&heldOnly=true&includePlan=true",
+      "GET /api/mcp/signals?days=30&minScore=4&role=CEO&heldOnly=true&watchedOnly=false&includePlan=true",
       "GET /api/mcp/clusters?days=60",
       "GET /api/mcp/ticker/GSBD",
     ]);

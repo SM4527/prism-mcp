@@ -22,6 +22,12 @@ export function registerRecent(server: McpServer, ctx: ToolContext): void {
         minScore: z.number().int().min(0).optional().describe("Lowest score to include."),
         role: z.enum(ROLES).optional().describe("Only this insider role."),
         heldOnly: z.boolean().optional().describe("Only stocks the user holds now."),
+        watchedOnly: z
+          .boolean()
+          .optional()
+          .describe(
+            "Default true: only companies currently on the watch list. False also includes companies removed from it.",
+          ),
         includePlan: z.boolean().optional().describe("Include plan buys. Leave false unless the user asks."),
       },
       outputSchema: SignalsResponse.shape,
@@ -29,7 +35,7 @@ export function registerRecent(server: McpServer, ctx: ToolContext): void {
     async (query) => {
       const response = await ctx.signalprism.signals(query);
       const { filters, count, truncated } = response;
-      const head = `${count} signals filed in the last ${filters.days} days, minimum score ${filters.min_score}${filters.include_plan ? ", plan buys included" : ""}.`;
+      const head = `${count} signals filed in the last ${filters.days} days, minimum score ${filters.min_score}${filters.watched_only ? "" : ", including removed companies"}${filters.include_plan ? ", plan buys included" : ""}.`;
       const cap = truncated ? ["Result hit the 200-row cap; older or lower rows may be missing."] : [];
       const rows = listLines(response.signals.map(signalText), "signals");
       return toolResult([asOfLine(response.as_of), head, ...cap, ...rows].join("\n"), response);

@@ -18,6 +18,7 @@ export interface SignalsQuery {
   minScore?: number;
   role?: string;
   heldOnly?: boolean;
+  watchedOnly?: boolean;
   includePlan?: boolean;
 }
 

@@ -77,7 +77,7 @@ const signalFixture = (name: string) => readFileSync(`${SIGNAL_FIXTURES}/${name}
 
 /** The only query parameters SignalPrism accepts, by path. Anything else is a 400. */
 const SIGNALPRISM_PARAMS: Record<string, string[]> = {
-  "/api/mcp/signals": ["days", "minScore", "role", "heldOnly", "includePlan"],
+  "/api/mcp/signals": ["days", "minScore", "role", "heldOnly", "watchedOnly", "includePlan"],
   "/api/mcp/clusters": ["days"],
 };
 

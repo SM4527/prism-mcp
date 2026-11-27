@@ -41,6 +41,7 @@ export const SignalsResponse = z.strictObject({
     min_score: z.number().int(),
     role: z.string().nullable(),
     held_only: z.boolean(),
+    watched_only: z.boolean(),
     include_plan: z.boolean(),
   }),
   count: z.number().int(),
