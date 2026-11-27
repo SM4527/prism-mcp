@@ -6,10 +6,6 @@ A personal analysis tool, not investment advice. Data comes from your own FolioP
 
 **Tech stack.** Node 24+, TypeScript 6, the v1 MCP TypeScript SDK (`@modelcontextprotocol/sdk`, stdio transport), zod, decimal.js and Vitest. It connects to a local FolioPrism instance (sample stack on `127.0.0.1:8420`) and/or a local SignalPrism instance (sample stack on `127.0.0.1:8500`).
 
-![Demo](docs/demo.gif)
-
-*Sample portfolio, Qwen3 4B Instruct in LM Studio*
-
 | Tool | Answers |
 |---|---|
 | `prism_status` | Which apps are configured and reachable, sample or personal stack, enabled tools, detail level |
@@ -97,6 +93,10 @@ Small local models can add details that aren't in the tool's answer. Expand the 
 
 FolioPrism analyzes your portfolio, including look-through exposure across funds. It is on by default.
 
+![FolioPrism Demo](docs/demo.gif)
+
+*Sample portfolio, Qwen3 4B Instruct in LM Studio*
+
 - Sample stack: `baseUrl` defaults to `http://127.0.0.1:8420`. Start FolioPrism's sample stack first.
 - Tools: `folioprism_summary` (`mergeShareClasses`), `folioprism_prism_view` (`section`; all sections when omitted), `folioprism_top_stocks` (`limit`, 1-50), `folioprism_stock_exposure` (`ticker`), `folioprism_fund_overlap` (`fundA`, `fundB`, `limit`), `folioprism_data_quality` (no parameters). `prism_status` (no parameters) shows whether FolioPrism is reachable, sample or personal, and which tools are enabled.
 - At `percent` detail, results hold percentages, tickers and names only. At `full` (set in your config file, never by the model) they add dollar values (`valueUsd`, the yearly fee in `folioprism_prism_view`) and the portfolio total (`totalUsd` in `folioprism_summary`).
@@ -109,6 +109,10 @@ SignalPrism tracks insider purchases from SEC Form 4 filings. It is off until yo
 ```json
 { "apps": { "signalprism": { "enabled": true } } }
 ```
+
+![SignalPrism Demo](docs/signalprism-demo.gif)
+
+*Sample insider buys & clusters, Qwen3 4B Instruct in LM Studio*
 
 - Sample stack: `baseUrl` defaults to `http://127.0.0.1:8500`. Start SignalPrism's sample stack first. Pointing at your personal stack (port 8510) is your own choice, made in your own config outside this repo.
 - Tools: `signalprism_recent` (`days`, `minScore`, `role`, `heldOnly`, `includePlan`), `signalprism_clusters` (`days`), `signalprism_ticker` (`ticker`). Each answer starts with `as of <time>`. Plan buys (10b5-1, ESPP, DRIP, 401(k)) are left out unless `includePlan` is true.
