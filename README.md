@@ -1,14 +1,36 @@
 # Prism MCP
 
-A read-only MCP server (stdio) that lets an AI assistant answer questions about your own Prism apps, starting with [FolioPrism](https://github.com/SM4527/folioprism). It runs on your machine and only talks to loopback addresses.
+A read-only MCP server (stdio) that lets an AI assistant answer questions about your own Prism apps: [FolioPrism](https://github.com/SM4527/folioprism) (portfolio analysis) and [SignalPrism](https://github.com/SM4527/signalprism) (insider purchases from SEC Form 4 filings). It runs on your machine and only talks to loopback addresses.
 
-A personal analysis tool, not investment advice. Data comes from your own FolioPrism instance.
+Built with Claude Code: plan, code and tests written in milestone sessions with Claude Code, each milestone reviewed before commit.
+
+A personal analysis tool, not investment advice. Data comes from your own FolioPrism and SignalPrism instances.
 
 ![Demo](docs/demo.gif)
 
 *Sample portfolio, Qwen3 4B Instruct in LM Studio*
 
-Tools: `prism_status`, `folioprism_summary`, `folioprism_top_stocks`, `folioprism_stock_exposure`, `folioprism_fund_overlap`, `folioprism_prism_view`, `folioprism_data_quality`, and, when enabled, `signalprism_recent`, `signalprism_clusters`, `signalprism_ticker`.
+| App | Tools |
+|---|---|
+| Server | `prism_status` |
+| FolioPrism | `folioprism_summary`, `folioprism_top_stocks`, `folioprism_stock_exposure`, `folioprism_fund_overlap`, `folioprism_prism_view`, `folioprism_data_quality` |
+| SignalPrism (off until enabled) | `signalprism_recent`, `signalprism_clusters`, `signalprism_ticker` |
+
+## Example
+
+Question: *Any insider buys in my holdings in the last 30 days?*
+
+The model calls `signalprism_recent` with `days: 30` (and `heldOnly: true` on a stack that has holdings). Abridged answer, sample data:
+
+```
+as of 2026-11-27 11:50 ET
+IRBR (IRONBRIDGE INDUSTRIAL CORP): Nakamura Ren, CEO, bought $12,000, +16%, on 2026-11-25, filed 2026-11-26, score 6
+ACMR (ACME ROBOTICS CORP): Okafor Sam, DIRECTOR, bought $31,200, +60%, on 2026-11-16, filed 2026-11-17, score 8 [cluster]
+ACMR (ACME ROBOTICS CORP): Okafor Sam, CFO, bought $20,000, +10%, on 2026-11-09, filed 2026-11-12, score 9 [cluster]
+...
+```
+
+The sample stack holds no positions, so the holdings filter returns nothing there; the rows above are unfiltered. A local model (Qwen3 4B Instruct in LM Studio) handled the tool calls well.
 
 ## Run
 

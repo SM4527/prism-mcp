@@ -10,6 +10,11 @@ import {
   stopFakeSignalPrism,
 } from "./helpers.js";
 
+/** The first line every SignalPrism answer should start with, read from the fixture. */
+function asOfLine(name: string): string {
+  return `as of ${JSON.parse(readFileSync(`fixtures/signalprism/${name}.json`, "utf8")).as_of}`;
+}
+
 let client: Client;
 let fake: FakeSignalPrism;
 beforeEach(async () => ({ client, fake } = await connectToFakeSignalPrism()));
@@ -22,7 +27,7 @@ describe("signalprism_recent", () => {
   it("starts with the as-of time and lists signals", async () => {
     const { text, structured, isError } = await callTool(client, "signalprism_recent");
     expect(isError).toBe(false);
-    expect(text.split("\n")[0]).toBe("as of 2026-11-27 11:50 ET");
+    expect(text.split("\n")[0]).toBe(asOfLine("signals"));
     expect(text).toContain("IRBR");
     expect(structured).toHaveProperty("signals");
   });
@@ -79,7 +84,7 @@ describe("signalprism_recent", () => {
 describe("signalprism_clusters", () => {
   it("lists clusters with their members", async () => {
     const { text, structured } = await callTool(client, "signalprism_clusters", { days: 400 });
-    expect(text.split("\n")[0]).toBe("as of 2026-11-27 11:50 ET");
+    expect(text.split("\n")[0]).toBe(asOfLine("clusters"));
     expect(text).toContain("ACMR");
     expect(text).toContain("3 insiders");
     expect(structured).toHaveProperty("clusters");
@@ -90,7 +95,7 @@ describe("signalprism_clusters", () => {
 describe("signalprism_ticker", () => {
   it("returns one ticker, any case", async () => {
     const { text, structured } = await callTool(client, "signalprism_ticker", { ticker: "gsbd" });
-    expect(text.split("\n")[0]).toBe("as of 2026-11-27 11:50 ET");
+    expect(text.split("\n")[0]).toBe(asOfLine("ticker-GSBD"));
     expect(text).toContain("GSBD (Goldman Sachs BDC, Inc.), not held");
     expect(structured).toMatchObject({ ticker: "GSBD", plan_count: 0 });
     expect(fake.requests[0].url).toBe("/api/mcp/ticker/GSBD");

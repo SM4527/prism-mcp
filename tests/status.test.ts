@@ -103,7 +103,7 @@ describe("prism_status for SignalPrism", () => {
   it("reports a running SignalPrism with its last poll and no pause", async () => {
     fakeSignal = await startFakeSignalPrism();
     fakeSignal.bodies.status = JSON.stringify({
-      as_of: "2026-11-27 11:50 ET",
+      as_of: JSON.parse(readFileSync("fixtures/signalprism/status.json", "utf8")).as_of,
       stack: "sample",
       companies_watched: 27,
       last_poll: { started_at: "2026-11-27 11:00 ET", finished_at: "2026-11-27 11:02 ET", new_filings: 3, new_signals: 1, errors: 0 },
