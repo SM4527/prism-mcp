@@ -1,7 +1,7 @@
 {
   "name": "prism-mcp",
   "version": "0.0.1",
-  "description": "Read-only MCP server that answers questions about your own Prism apps, starting with FolioPrism.",
+  "description": "Read-only MCP server that answers questions about your own Prism apps, starting with FolioPrism and SignalPrism.",
   "license": "MIT",
   "type": "module",
   "private": true,

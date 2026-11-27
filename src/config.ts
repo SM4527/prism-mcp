@@ -18,12 +18,19 @@ const AppSchema = z.object({
 });
 
 const SAMPLE_FOLIOPRISM = { enabled: true, baseUrl: "http://127.0.0.1:8420", tools: {} };
+const SAMPLE_SIGNALPRISM_URL = "http://127.0.0.1:8500";
+const SAMPLE_SIGNALPRISM = { enabled: false, baseUrl: SAMPLE_SIGNALPRISM_URL, tools: {} };
+
+const SignalPrismSchema = AppSchema.extend({ baseUrl: z.url().default(SAMPLE_SIGNALPRISM_URL) });
 
 const ConfigSchema = z.object({
   detail: z.enum(["percent", "full"]).default("percent"),
   apps: z
-    .object({ folioprism: AppSchema.default(SAMPLE_FOLIOPRISM) })
-    .default({ folioprism: SAMPLE_FOLIOPRISM }),
+    .object({
+      folioprism: AppSchema.default(SAMPLE_FOLIOPRISM),
+      signalprism: SignalPrismSchema.default(SAMPLE_SIGNALPRISM),
+    })
+    .default({ folioprism: SAMPLE_FOLIOPRISM, signalprism: SAMPLE_SIGNALPRISM }),
   logDir: z.string().default("~/.prism-mcp/logs"),
 });
 

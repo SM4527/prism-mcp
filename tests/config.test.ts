@@ -21,6 +21,25 @@ describe("config", () => {
   it("loads the example file", () => {
     const config = loadConfig({ PRISM_MCP_CONFIG: "config.example.json" });
     expect(config.apps.folioprism.tools).toEqual({ folioprism_top_stocks: false });
+    expect(config.apps.signalprism).toMatchObject({ enabled: false, baseUrl: "http://127.0.0.1:8500" });
+  });
+
+  it("leaves SignalPrism off at its sample URL unless configured", () => {
+    expect(parseConfig({}).apps.signalprism).toEqual({ enabled: false, baseUrl: "http://127.0.0.1:8500", tools: {} });
+  });
+
+  it("defaults the SignalPrism base URL when the block omits it", () => {
+    expect(parseConfig({ apps: { signalprism: { enabled: true } } }).apps.signalprism.baseUrl).toBe("http://127.0.0.1:8500");
+  });
+
+  it("rejects a non-loopback SignalPrism base URL", () => {
+    const raw = { apps: { signalprism: { baseUrl: "http://192.168.1.5:8500" } } };
+    expect(() => parseConfig(raw)).toThrow(/not a loopback/);
+  });
+
+  it("refuses an unknown SignalPrism tool name", () => {
+    const raw = { apps: { signalprism: { tools: { signalprism_recnt: false } } } };
+    expect(() => parseConfig(raw)).toThrow("Refusing to start: unknown tool in config: apps.signalprism.tools.signalprism_recnt");
   });
 
   it.each(["percent", "full"])("accepts detail %s", (detail) => {

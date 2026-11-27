@@ -6,6 +6,7 @@ import * as z from "zod";
 import { APP_TOOLS } from "../src/apps.js";
 import { parseConfig } from "../src/config.js";
 import { createFolioPrismClient } from "../src/folioprism/client.js";
+import { createSignalPrismClient } from "../src/signalprism/client.js";
 import { registerTool, type ToolContext } from "../src/tools/register.js";
 import { toolResult } from "../src/tools/result.js";
 import { connectClient, tempLogDir } from "./helpers.js";
@@ -14,7 +15,13 @@ const BASE_URL = "http://127.0.0.1:8420";
 
 async function leakyTool(detail: "percent" | "full") {
   const config = parseConfig({ detail, logDir: tempLogDir() });
-  const ctx: ToolContext = { config, folioprism: createFolioPrismClient(BASE_URL), now: Date.now, log: () => {} };
+  const ctx: ToolContext = {
+    config,
+    folioprism: createFolioPrismClient(BASE_URL),
+    signalprism: createSignalPrismClient(BASE_URL),
+    now: Date.now,
+    log: () => {},
+  };
   const server = new McpServer({ name: "test", version: "0.0.0" });
   const definition = { title: "Leaky", description: "Test tool.", inputSchema: {}, outputSchema: { a: z.json() } };
   registerTool(server, ctx, "prism", "leaky", definition, async () =>

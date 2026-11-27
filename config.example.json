@@ -5,6 +5,11 @@
       "enabled": true,
       "baseUrl": "http://127.0.0.1:8420",
       "tools": { "folioprism_top_stocks": false }
+    },
+    "signalprism": {
+      "enabled": false,
+      "baseUrl": "http://127.0.0.1:8500",
+      "tools": {}
     }
   },
   "logDir": "~/.prism-mcp/logs"

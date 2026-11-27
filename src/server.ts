@@ -2,7 +2,9 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import type { Config } from "./config.js";
 import { createFolioPrismClient } from "./folioprism/client.js";
 import { type CallLog, createCallLog } from "./log.js";
+import { createSignalPrismClient } from "./signalprism/client.js";
 import { registerFolioPrismTools } from "./tools/folioprism/index.js";
+import { registerSignalPrismTools } from "./tools/signalprism/index.js";
 import type { ToolContext } from "./tools/register.js";
 import { registerStatus } from "./tools/status.js";
 
@@ -16,11 +18,13 @@ export function createServer(config: Config, options: ServerOptions = {}): McpSe
   const ctx: ToolContext = {
     config,
     folioprism: createFolioPrismClient(config.apps.folioprism.baseUrl),
+    signalprism: createSignalPrismClient(config.apps.signalprism.baseUrl),
     now: options.now ?? Date.now,
     log: options.log ?? createCallLog(config.logDir),
   };
   const server = new McpServer({ name: "prism-mcp", version: "0.0.1" });
   registerStatus(server, ctx);
   registerFolioPrismTools(server, ctx);
+  registerSignalPrismTools(server, ctx);
   return server;
 }

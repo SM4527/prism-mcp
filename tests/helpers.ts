@@ -72,6 +72,64 @@ export async function stopFakeFolioPrism(fake: FakeFolioPrism): Promise<void> {
   await new Promise((resolve) => fake.server.close(resolve));
 }
 
+const SIGNAL_FIXTURES = "fixtures/signalprism";
+const signalFixture = (name: string) => readFileSync(`${SIGNAL_FIXTURES}/${name}.json`, "utf8");
+
+/** The only query parameters SignalPrism accepts, by path. Anything else is a 400. */
+const SIGNALPRISM_PARAMS: Record<string, string[]> = {
+  "/api/mcp/signals": ["days", "minScore", "role", "heldOnly", "includePlan"],
+  "/api/mcp/clusters": ["days"],
+};
+
+export interface FakeSignalPrism {
+  baseUrl: string;
+  server: Server;
+  requests: { method: string; url: string }[];
+  /** Override a response body by file name without extension, such as "status". */
+  bodies: Record<string, string>;
+}
+
+function respondSignalPrism(fake: FakeSignalPrism, req: IncomingMessage, res: ServerResponse): void {
+  const url = new URL(req.url ?? "/", fake.baseUrl);
+  const send = (status: number, body: string) => {
+    res.writeHead(status, { "content-type": "application/json" });
+    res.end(body);
+  };
+  const body = (name: string) => fake.bodies[name] ?? signalFixture(name);
+  const allowed = SIGNALPRISM_PARAMS[url.pathname] ?? [];
+  if (req.method !== "GET") return send(405, '{"error":"method not allowed"}');
+  if ([...url.searchParams.keys()].some((key) => !allowed.includes(key))) return send(400, '{"error":"unknown parameter"}');
+  if (url.pathname === "/api/mcp/status") return send(200, body("status"));
+  if (url.pathname === "/api/mcp/clusters") return send(200, body("clusters"));
+  if (url.pathname === "/api/mcp/signals") {
+    return send(200, body(url.searchParams.get("includePlan") === "true" ? "signals-with-plan" : "signals"));
+  }
+  if (url.pathname === "/api/mcp/ticker/GSBD") return send(200, body("ticker-GSBD"));
+  send(404, '{"error":"not found"}');
+}
+
+/** Start a fake SignalPrism on an ephemeral loopback port that serves the fixtures and records requests. */
+export async function startFakeSignalPrism(): Promise<FakeSignalPrism> {
+  const fake: FakeSignalPrism = {
+    baseUrl: "",
+    requests: [],
+    bodies: {},
+    server: createHttpServer((req, res) => {
+      fake.requests.push({ method: req.method ?? "", url: req.url ?? "" });
+      respondSignalPrism(fake, req, res);
+    }),
+  };
+  await new Promise<void>((resolve) => fake.server.listen(0, "127.0.0.1", resolve));
+  fake.baseUrl = `http://127.0.0.1:${(fake.server.address() as AddressInfo).port}`;
+  return fake;
+}
+
+/** Stop a fake SignalPrism, dropping any request still waiting. */
+export async function stopFakeSignalPrism(fake: FakeSignalPrism): Promise<void> {
+  fake.server.closeAllConnections();
+  await new Promise((resolve) => fake.server.close(resolve));
+}
+
 /** A fresh empty log folder outside the repo, so tests never write to the home folder. */
 export function tempLogDir(): string {
   return mkdtempSync(join(tmpdir(), "prism-mcp-logs-"));
@@ -109,6 +167,24 @@ export async function connectToFake(
   };
   const client = await connectClient(raw, options);
   return { client, fake };
+}
+
+export interface SignalPrismFakeOptions {
+  detail?: "percent" | "full";
+  tools?: Record<string, boolean>;
+}
+
+/** Start a fake SignalPrism and connect an MCP client to a server with SignalPrism enabled against it. */
+export async function connectToFakeSignalPrism({ detail, tools }: SignalPrismFakeOptions = {}): Promise<{
+  client: Client;
+  fake: FakeSignalPrism;
+}> {
+  const fake = await startFakeSignalPrism();
+  const raw = {
+    ...(detail && { detail }),
+    apps: { signalprism: { enabled: true, baseUrl: fake.baseUrl, ...(tools && { tools }) } },
+  };
+  return { client: await connectClient(raw), fake };
 }
 
 /** Call a tool and return its text and structured content. */

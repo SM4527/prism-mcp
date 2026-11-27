@@ -8,7 +8,7 @@ A personal analysis tool, not investment advice. Data comes from your own FolioP
 
 *Sample portfolio, Qwen3 4B Instruct in LM Studio*
 
-Tools: `prism_status`, `folioprism_summary`, `folioprism_top_stocks`, `folioprism_stock_exposure`, `folioprism_fund_overlap`, `folioprism_prism_view`, `folioprism_data_quality`.
+Tools: `prism_status`, `folioprism_summary`, `folioprism_top_stocks`, `folioprism_stock_exposure`, `folioprism_fund_overlap`, `folioprism_prism_view`, `folioprism_data_quality`, and, when enabled, `signalprism_recent`, `signalprism_clusters`, `signalprism_ticker`.
 
 ## Run
 
@@ -44,6 +44,20 @@ Small local models can add details that aren't in the tool's answer. Expand the 
 **Sample vs personal stack.** The default points at FolioPrism's sample stack on port 8420. Pointing at your personal stack (port 8430) is your own choice, made in your own config outside this repo. The server refuses any base URL that is not `127.0.0.1`, `localhost` or `[::1]`, and only sends GET requests.
 
 `npm run privacy-scan` runs on pre-push and blocks local config, env files and logs.
+
+## SignalPrism
+
+SignalPrism tracks insider purchases from SEC Form 4 filings. It is off until you enable it in your config:
+
+```json
+{ "apps": { "signalprism": { "enabled": true } } }
+```
+
+- Sample stack: `baseUrl` defaults to `http://127.0.0.1:8500`. Start SignalPrism's sample stack first. Pointing at your personal stack (port 8510) is your own choice, made in your own config outside this repo.
+- Tools: `signalprism_recent` (`days`, `minScore`, `role`, `heldOnly`, `includePlan`), `signalprism_clusters` (`days`), `signalprism_ticker` (`ticker`). Each answer starts with `as of <time>`. Plan buys (10b5-1, ESPP, DRIP, 401(k)) are left out unless `includePlan` is true.
+- Same guards as FolioPrism: loopback only, GET only, per-tool allowlist, calls logged without results. `prism_status` shows whether SignalPrism is reachable, sample or personal, its last poll and whether polling is paused.
+- Purchase values (`value_usd`) are public SEC data, so they are returned at `percent` detail too. The tools never return your own holdings amounts, only `held_via` (`direct`, `funds` or null).
+- Research data, not investment advice.
 
 ## Setup: LM Studio (local, recommended for real data)
 

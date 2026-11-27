@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 
 const PERSONAL_PORT = "84" + "30";
+const SIGNALPRISM_PERSONAL_PORT = new RegExp("(?<![\\d.])85" + "10(?!\\d)", "g");
 const ALLOWED_PORT_MENTIONS = { "README.md": 1, "CLAUDE.md": Infinity };
 const THIRD_PARTY_NAME = new RegExp("morning" + "star", "i");
 const FORBIDDEN_FILES = [/(^|\/)config\.local\.json$/, /(^|\/)\.env(?!\.example$)[^/]*$/, /(^|\/)logs\//, /\.log$/];
@@ -18,6 +19,10 @@ for (const file of files) {
   if (!file.startsWith("tests/fixtures/") && THIRD_PARTY_NAME.test(content)) problems.push(`${file}: contains a third-party data vendor name`);
   const mentions = content.split(PERSONAL_PORT).length - 1;
   if (mentions > (ALLOWED_PORT_MENTIONS[file] ?? 0)) problems.push(`${file}: mentions the personal port ${mentions} time(s)`);
+  const signalMentions = (content.match(SIGNALPRISM_PERSONAL_PORT) ?? []).length;
+  if (signalMentions > (ALLOWED_PORT_MENTIONS[file] ?? 0)) {
+    problems.push(`${file}: mentions the SignalPrism personal port ${signalMentions} time(s)`);
+  }
 }
 
 if (problems.length > 0) {

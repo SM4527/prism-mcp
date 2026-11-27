@@ -8,4 +8,5 @@ export const APP_TOOLS: Record<string, readonly string[]> = {
     "folioprism_fund_overlap",
     "folioprism_data_quality",
   ],
+  signalprism: ["signalprism_recent", "signalprism_clusters", "signalprism_ticker"],
 };
