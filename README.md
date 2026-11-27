@@ -2,9 +2,9 @@
 
 A read-only MCP server (stdio) that lets an AI assistant answer questions about your own Prism apps: [FolioPrism](https://github.com/SM4527/folioprism) (portfolio analysis) and [SignalPrism](https://github.com/SM4527/signalprism) (insider purchases from SEC Form 4 filings). It runs on your machine and only talks to loopback addresses.
 
-Built with Claude Code: plan, code and tests written in milestone sessions with Claude Code, each milestone reviewed before commit.
-
 A personal analysis tool, not investment advice. Data comes from your own FolioPrism and SignalPrism instances.
+
+**Tech stack.** Node 24+, TypeScript 6, the v1 MCP TypeScript SDK (`@modelcontextprotocol/sdk`, stdio transport), zod, decimal.js and Vitest. It connects to a local FolioPrism instance (sample stack on `127.0.0.1:8420`) and/or a local SignalPrism instance (sample stack on `127.0.0.1:8500`).
 
 ![Demo](docs/demo.gif)
 
@@ -46,6 +46,25 @@ Try it by hand with `npx @modelcontextprotocol/inspector node dist/index.js`. Fo
 
 Pass a JSON file shaped like `config.example.json` with `--config <path>` or the `PRISM_MCP_CONFIG` environment variable. If both are set, `--config` wins. Use an absolute path: clients do not control the working directory. Without either, the server uses the FolioPrism sample stack on `http://127.0.0.1:8420` at the `percent` detail level. Keep your own config outside the repo. A missing or invalid config file stops the server; it never falls back to defaults.
 
+```json
+{
+  "detail": "percent",
+  "apps": {
+    "folioprism": {
+      "enabled": true,
+      "baseUrl": "http://127.0.0.1:8420",
+      "tools": { "folioprism_top_stocks": false }
+    },
+    "signalprism": {
+      "enabled": false,
+      "baseUrl": "http://127.0.0.1:8500",
+      "tools": {}
+    }
+  },
+  "logDir": "~/.prism-mcp/logs"
+}
+```
+
 - `detail`: `percent` (default) or `full`. Only the config file sets it, never the model.
 - `apps.<app>.enabled` and `apps.<app>.tools`: every tool is on unless set to `false`. Turned-off tools are not listed at all. An unknown tool name stops the server.
 - `logDir` (default `~/.prism-mcp/logs`): each call appends time, tool, arguments, result size, duration and ok to `calls.jsonl`. Results are never logged. It must be outside this folder.
@@ -65,7 +84,7 @@ Small local models can add details that aren't in the tool's answer. Expand the 
 
 **Sample vs personal stack.** The default points at FolioPrism's sample stack on port 8420. Pointing at your personal stack (port 8430) is your own choice, made in your own config outside this repo. The server refuses any base URL that is not `127.0.0.1`, `localhost` or `[::1]`, and only sends GET requests.
 
-`npm run privacy-scan` runs on pre-push and blocks local config, env files and logs.
+`npm run privacy-scan` runs on pre-push (`.githooks/pre-push`) and blocks local config, env files and logs. `npm install` activates the hook through the `prepare` script; if you skipped it, run `git config core.hooksPath .githooks` once.
 
 ## SignalPrism
 
@@ -128,6 +147,21 @@ Tool results go to Anthropic. Keep `detail` at `percent` and do not use `full`.
 
 Tested on Windows on ARM (Snapdragon X): Claude Desktop ran as native ARM64 and `prism_status` worked against the sample stack.
 
+## Troubleshooting
+
+- Ask the assistant to call `prism_status` first. It shows the stack, detail level, enabled tools and whether each app is reachable.
+- Confirm FolioPrism (`127.0.0.1:8420` for the sample stack) and SignalPrism (`127.0.0.1:8500`) are running and listening on loopback.
+- Use an absolute path for `--config` or `PRISM_MCP_CONFIG`. A missing or invalid config stops the server.
+- Check `~/.prism-mcp/logs/calls.jsonl` (or your `logDir`) to see which tools were called, with what arguments, and whether they succeeded.
+
 ## Development
 
 `npm test`, `npm run lint`. Built on the v1 MCP TypeScript SDK (`@modelcontextprotocol/sdk`). Demo recording steps: `docs/demo-checklist.md`.
+
+## Built with Claude Code
+
+Plan, code and tests written in milestone sessions with Claude Code, each milestone reviewed before commit.
+
+## License
+
+[MIT](LICENSE)
