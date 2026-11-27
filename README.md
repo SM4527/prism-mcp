@@ -19,6 +19,10 @@ A personal analysis tool, not investment advice. Data comes from your own FolioP
 | `signalprism_clusters` | Several insiders buying the same stock close together |
 | `signalprism_ticker` | One stock's insider purchases over 12 months and its clusters |
 
+![Prism Status](docs/prism-status.png)
+
+*prism_status verifying both sample stacks and percent detail level, Qwen3 4B Instruct in LM Studio*
+
 ## Example
 
 Question: *Any insider buys in my holdings in the last 30 days?*

@@ -36,3 +36,10 @@ Sample stack only (`http://127.0.0.1:8420`). Never record anything from the pers
 - Before capturing, check the frame for real tickers or amounts, other windows, and the personal server entry in LM Studio's integrations panel. Crop to the chat column, which drops the right-hand panel.
 - Layout: 960 px wide, dark title card (2.5 s), then each screenshot under a step header (6 s and 7 s), looping. Same style as `docs/demo.gif`, built with a short Pillow script (`uv run --with pillow`) that is not kept in the repo.
 - Add it to the README under `## SignalPrism` and run `npm run privacy-scan`.
+
+## prism_status screenshot
+
+`docs/prism-status.png` is a single LM Studio screenshot of `prism_status` against both sample stacks (`8420` and `8500`), shown below the tool table in the README.
+
+- Crop to the chat column only (same as the SignalPrism GIF): remove the left sidebar and the right-hand integrations panel, which lists the personal server entry. The prompt and full response stay.
+- Before committing, view the cropped file for real tickers or amounts, chat names in the sidebar and other windows. Run `npm run privacy-scan`.
