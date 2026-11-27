@@ -10,11 +10,18 @@ A personal analysis tool, not investment advice. Data comes from your own FolioP
 
 *Sample portfolio, Qwen3 4B Instruct in LM Studio*
 
-| App | Tools |
+| Tool | Answers |
 |---|---|
-| Server | `prism_status` |
-| FolioPrism | `folioprism_summary`, `folioprism_top_stocks`, `folioprism_stock_exposure`, `folioprism_fund_overlap`, `folioprism_prism_view`, `folioprism_data_quality` |
-| SignalPrism (off until enabled) | `signalprism_recent`, `signalprism_clusters`, `signalprism_ticker` |
+| `prism_status` | Which apps are configured and reachable, sample or personal stack, enabled tools, detail level |
+| `folioprism_summary` | Holdings with weights, top-10 look-through concentration, stale or unpriced tickers |
+| `folioprism_prism_view` | Portfolio vs benchmark: allocation, style box, sectors, regions, valuation, fees, bonds |
+| `folioprism_top_stocks` | Largest look-through stock exposures and which funds contribute |
+| `folioprism_stock_exposure` | How much of the portfolio is in one stock, in total and through each fund |
+| `folioprism_fund_overlap` | Stocks two held funds both own, with each fund's weight |
+| `folioprism_data_quality` | Freshness and completeness of FolioPrism's data |
+| `signalprism_recent` | Recent scored insider purchases from SEC Form 4 filings (off until enabled) |
+| `signalprism_clusters` | Several insiders buying the same stock close together |
+| `signalprism_ticker` | One stock's insider purchases over 12 months and its clusters |
 
 ## Example
 
@@ -91,7 +98,7 @@ Small local models can add details that aren't in the tool's answer. Expand the 
 FolioPrism analyzes your portfolio, including look-through exposure across funds. It is on by default.
 
 - Sample stack: `baseUrl` defaults to `http://127.0.0.1:8420`. Start FolioPrism's sample stack first.
-- Tools: `folioprism_summary` (`mergeShareClasses`), `folioprism_top_stocks` (`limit`, 1-50), `folioprism_stock_exposure` (`ticker`), `folioprism_fund_overlap` (`fundA`, `fundB`, `limit`), `folioprism_prism_view` (`section`; all sections when omitted), `folioprism_data_quality` (no parameters).
+- Tools: `folioprism_summary` (`mergeShareClasses`), `folioprism_prism_view` (`section`; all sections when omitted), `folioprism_top_stocks` (`limit`, 1-50), `folioprism_stock_exposure` (`ticker`), `folioprism_fund_overlap` (`fundA`, `fundB`, `limit`), `folioprism_data_quality` (no parameters). `prism_status` (no parameters) shows whether FolioPrism is reachable, sample or personal, and which tools are enabled.
 - At `percent` detail, results hold percentages, tickers and names only. At `full` (set in your config file, never by the model) they add dollar values (`valueUsd`, the yearly fee in `folioprism_prism_view`) and the portfolio total (`totalUsd` in `folioprism_summary`).
 - Same guards as SignalPrism: loopback only, GET only, per-tool allowlist, calls logged without results.
 
