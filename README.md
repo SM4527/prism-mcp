@@ -1,5 +1,9 @@
 # Prism MCP
 
+[![ci](https://img.shields.io/github/actions/workflow/status/SM4527/prism-mcp/ci.yml?branch=main&label=ci&logo=github)](https://github.com/SM4527/prism-mcp/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![release](https://img.shields.io/github/v/release/SM4527/prism-mcp?color=orange)](https://github.com/SM4527/prism-mcp/releases)
+
 A read-only MCP server (stdio) that lets an AI assistant answer questions about your own Prism apps: [FolioPrism](https://github.com/SM4527/folioprism) (portfolio analysis) and [SignalPrism](https://github.com/SM4527/signalprism) (insider purchases from SEC Form 4 filings). It runs on your machine and only talks to loopback addresses.
 
 A personal analysis tool, not investment advice. Data comes from your own FolioPrism and SignalPrism instances.
