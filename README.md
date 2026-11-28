@@ -3,6 +3,7 @@
 [![ci](https://img.shields.io/github/actions/workflow/status/SM4527/prism-mcp/ci.yml?branch=main&label=ci&logo=github)](https://github.com/SM4527/prism-mcp/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![release](https://img.shields.io/github/v/release/SM4527/prism-mcp?color=orange)](https://github.com/SM4527/prism-mcp/releases)
+[![M8ven Score](https://m8ven.ai/badge/mcp/sm4527-prism-mcp-eqsac8?v=d4ab3c6b950a513f10dabb3f40c98701)](https://m8ven.ai/mcp/sm4527-prism-mcp-eqsac8?s=readme)
 
 A read-only MCP server (stdio) that lets an AI assistant answer questions about your own Prism apps: [FolioPrism](https://github.com/SM4527/folioprism) (portfolio analysis) and [SignalPrism](https://github.com/SM4527/signalprism) (insider purchases from SEC Form 4 filings). It runs on your machine and only talks to loopback addresses.
 
